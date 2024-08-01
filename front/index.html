@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste HTTP com WebSocket</title>
+        <script src="js/index.js" type="module"></script>
+        <link rel="stylesheet" href="css/index.css?d=2">
+
+
+
+    </head>
+    <body>
+        <!-- Componentes do Login -->
+        <div class="container display" data-name="login">
+            <form action="#">
+                <h3>Login</h3>
+
+                <div class=".input-container">
+                    <label>Nome: </label>
+                    <input name="nome" type="text" />
+                </div>
+                <div class=".input-container">
+                    <label>Senha: </label>
+                    <input name="senha" type="password" />
+                </div>
+                <button type="submit">Entrar</button>
+                <a data-redirect="cadastro">Cadastre-se</a>
+            </form>
+        </div>
+        <!-- Componentes do Cadastro -->
+        <div class="container" data-name="cadastro">
+            <form action="#">
+                <h3>Cadastro</h3>
+
+                <div class=".input-container">
+                    <label>Nome: </label>
+                    <input name="nome" type="text" />
+                </div>
+                <div class=".input-container">
+                    <label>Senha: </label>
+                    <input name="senha" type="password" />
+                </div>
+                <button type="submit">Cadastrar</button>
+                <a data-redirect="login">Fazer login</a>
+
+            </form>
+        </div>
+        <!-- Componentes do Chat -->
+        <div class="container" data-name="chat">
+            <div id="chat"></div>
+            <div>
+                <input type="text" name="user" id="user" placeholder="Seu nome">
+                <input type="text" name="texto" id="texto" placeholder="Sua mensagem">
+                <button id="enviar">Enviar</button>
+            </div>
+        </div>
+    </body>
+</html>
