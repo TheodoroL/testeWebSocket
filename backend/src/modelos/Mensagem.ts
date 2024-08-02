@@ -1,7 +1,7 @@
 type MensagemEnviada = {
-    id: 'mensagem-enviada',
+    id: 'enviar-mensagem',
     autor: number,
-    mensagem: string
+    message: string
 };
 
 type EfetuarCadastro = {

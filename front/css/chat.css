@@ -1,0 +1,176 @@
+@import url('./chat-memberlist.css');
+
+.container[data-name="chat"] {
+    flex-direction: row;
+
+    gap: 5px;
+}
+
+.container[data-name="chat"] .chat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    position: relative;
+    background-color: #222;
+    width: 800px;
+    height: 600px;
+    font-size: 1.5em;
+}
+
+.container[data-name="chat"] .chat .messages {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    position: relative;
+
+    width: 100%;
+    height: 90%;
+    background-color: #333;
+    
+    overflow: auto;
+}
+
+.container[data-name="chat"] .chat .messages .message-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+}
+
+.container[data-name="chat"] .chat .messages .message-container .message {
+    max-width: 90%;
+    max-height: 200px;
+
+    overflow: auto;
+
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    background-color: rgb(37, 36, 36);
+    border-radius: 4px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container[data-name="chat"] .chat .messages .message-container.you {
+    justify-content: right;
+}
+
+.container[data-name="chat"] .chat .messages .message-container.system {
+    justify-content: center;
+}
+
+.container[data-name="chat"] .chat .messages .message-container.system .message {
+    background-color: rgba(56, 44, 40, 0.836);
+}
+
+.container[data-name="chat"] .chat .messages .message-container.you .message {
+    background-color: rgb(24, 27, 29);
+}
+
+.container[data-name="chat"] .chat .messages .message-container .message .author {
+    padding-left: 2px;
+    padding-top: 2px;
+
+    font-weight: bold;
+    font-size: 0.85em;
+    color: #be3434;
+}
+
+.container[data-name="chat"] .chat .messages .message-container .message .text {
+    padding-left: 2px;
+    padding-top: 2px;
+    
+    font-size: 0.95em;
+}
+
+.container[data-name="chat"] .chat .footer {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container[data-name="chat"] .chat .footer input[name="texto"] {
+    width: 80%;
+    height: 40px;
+    font-size: 1em;
+
+    border-radius: 4px;
+    border: none;
+    outline: none;
+
+    text-indent: 2px;
+
+    color: white;
+    background-color: #444;
+    border: 2px solid transparent;
+
+    border-top: 1px solid rgb(199, 199, 199);
+    border-left: 1px solid rgb(199, 199, 199);
+
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+
+    filter: brightness(80%);
+
+    &:focus, &:hover {
+        filter: brightness(100%);
+    }
+}
+
+.container[data-name="chat"] .chat .footer button[id="enviar"] {
+    font-size: 1em;
+
+    text-align: center;
+    
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
+
+    width: 35px;
+    height: 35px;
+
+    transition: 0.3s;
+
+    user-select: none;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+}
+
+.container[data-name="chat"] .chat .footer button[id="enviar"] span {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    color: white;
+}

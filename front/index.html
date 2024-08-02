@@ -5,14 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Teste HTTP com WebSocket</title>
         <script src="js/index.js" type="module"></script>
-        <link rel="stylesheet" href="css/index.css?d=2">
-
-
-
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
     <body>
+        <div class="container display" data-name="connecting">
+            <div>Pera aí fi, tô ligando os cabos.</div>
+        </div>
         <!-- Componentes do Login -->
-        <div class="container display" data-name="login">
+        <div class="container" data-name="login">
             <form action="#">
                 <h3>Login</h3>
 
@@ -48,11 +49,18 @@
         </div>
         <!-- Componentes do Chat -->
         <div class="container" data-name="chat">
-            <div id="chat"></div>
-            <div>
-                <input type="text" name="user" id="user" placeholder="Seu nome">
-                <input type="text" name="texto" id="texto" placeholder="Sua mensagem">
-                <button id="enviar">Enviar</button>
+            <div class="chat">
+                <div class="messages"></div>
+                <div class="footer">
+                    <input type="text" name="texto" id="texto" placeholder="Sua mensagem">
+                    <button id="enviar">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </div>
+            </div>
+            <div class="member-list">
+                <h3>Membros conectados:</h3>
+                <div class="members"></div>
             </div>
         </div>
     </body>

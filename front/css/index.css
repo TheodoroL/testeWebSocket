@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 @import url('./login.css');
+@import url('./chat.css');
 
 * {
     margin: 0;
@@ -19,17 +20,31 @@ html, body {
 }
 
 .container {
-    position: relative;
+    position: relative; 
 
-    width: 100vw;
+    width: 100vw;   
     height: 100vh;
 
     display: none;
-    text-align: center;
     justify-content: center;
     align-items: center;
 }
 
 .display {
     display: flex;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #181818;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #979797;
+    border-radius: 20px;
+    border: 3px solid #464343;
+    cursor: pointer;
 }
